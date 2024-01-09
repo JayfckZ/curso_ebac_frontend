@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBAC Banking</title>
+    
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Campo Maior</h1>
+        <h2>Informe os números a seguir:</h2>
+
+        <form id="form">
+            <input type="number" id="valor1" required placeholder="Valor 1 (menor)">
+            <input type="number" id="valor2" placeholder="Valor 2 (maior)">
+            <p id="error-message">Valor 1 não pode ser maior ou igual ao valor 2.</p>
+            <button id="btn-depositar" type="submit">Verificar</button>
+        </form>
+    </div>
+
+    <p id="success-message"></p>
+    <script src="./main.js"></script>
+</body>
+</html>

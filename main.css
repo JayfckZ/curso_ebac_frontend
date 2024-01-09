@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    padding: 75px 430px;
+}
+.container {
+    max-width: 1280px;
+    position: relative;
+    width: 100%;
+    padding: 0 auto;
+}
+
+h1 {
+    width: 400px;
+}
+h2 {
+    margin-bottom: 24px;
+    width: 400px;
+    font-weight: normal;
+}
+form input, form textarea, form button{
+    display: block;
+    width: 400px;
+    margin-top: 8px;
+    padding: 5px;
+    
+}
+
+form textarea{
+    resize: none;
+}
+
+form input:focus, form textarea:focus {
+    outline-color: orange;
+}
+
+form button{
+    background-color: orange;
+    color: white;
+    font-style: italic;
+    font-size: large;
+    font-weight: bolder;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: rgb(212, 138, 0);
+}
+
+#success-message{
+    width: 400px;
+    background-color: green;
+    padding: 16px;
+    margin-top: 8px;
+    color: white;
+    display: none;
+}
+
+#error-message{
+    width: 400px;
+    padding-left: 5px;
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+input.error{
+    color: red;
+    border-color: red;
+    outline-color: red;
+}
