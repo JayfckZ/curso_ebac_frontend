@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt=BT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        form, h2{
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2{
+            border-bottom: 4px solid rgba(13,110,253,255);
+        }
+
+        .col{
+            margin-top: 52px;
+        }
+
+        .conteudo, .form-check, form > button, .alert{
+            margin-top: 16px;
+        }
+
+        .error{
+            color: red;
+            position: relative;
+            width: 100%;
+        }
+
+        .alert{
+            display: none;
+        }
+
+        .form-check-input{
+            width: 16px;
+        }
+
+        #check-error{
+            margin-left: 16px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="h1 text-primary">Cadastro</h2>
+                <form>
+                    <div class="conteudo">
+                        <label class="form-label" for="nome">Seu nome:</label>
+                        <input class="form-control" type="text" id="nome" name="nome">
+                    </div>
+
+                    <div class="conteudo">
+                        <label class="form-label" for="email">Seu email:</label>
+                        <input class="form-control" type="email" id="email" name="email" placeholder="email@provedor.com">
+                    </div>
+
+                    <div class="conteudo">
+                        <label class="form-label" for="telefone">Seu telefone:</label>
+                        <input class="form-control" type="tel" id="telefone" name="tel">
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label" for="termos">Li e concordo com os termos do site.</label>
+                        <input class="form-check-input" type="checkbox" name="check" id="termos">
+                    </div>
+
+                    <button class="btn btn-primary">Cadastrar</button>
+                </form>
+
+                <div class="alert alert-success">
+                    Cadastro realizado!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/messages_pt_PT.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
