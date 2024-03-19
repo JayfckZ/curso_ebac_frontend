@@ -46,6 +46,11 @@
                 return res.json()
             })
             .then(function(json){
+                for(let key in json){
+                    if (json[key] == 'Not Found'){
+                        throw new Error('Não foi possível recuperar os dados.')
+                    }
+                }
                 console.log(json)
                 nome.innerHTML = json.name
                 user.innerHTML = `@${json.login}`
@@ -54,6 +59,9 @@
                 seguidores.innerHTML = json.followers
                 seguindo.innerHTML = json.following
                 link.href = json.html_url
+            })
+            .catch(function(error){
+                alert('Algo deu errado ao puxar os dados, tente novamente mais tarde.')
             })
         })
     </script>
