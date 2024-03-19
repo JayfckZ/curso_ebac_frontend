@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Github</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img class="profile-avatar" src="https://via.placeholder.com/180x180" alt="." id="pic">
+            <h1 class="profile-name" id="nome">Nome</h1>
+            <h2 class="profile-username" id="user">@user</h2>
+            <ul class="numbers">
+                <li class="numbers-item">
+                    <h4>Repositórios</h4>
+                    <span id="repositorio"></span>
+                </li>
+                <li class="numbers-item">
+                    <h4>Seguidores</h4>
+                    <span id="seguidores"></span>
+                </li>
+                <li class="numbers-item">
+                    <h4>Seguindo</h4>
+                    <span id="seguindo"></span>
+                </li>
+            </ul>
+            <a href="#" class="profile-link" id="link">Ver no Github</a>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const nome = document.getElementById('nome')
+            const user = document.getElementById('user')
+            const avatar = document.getElementById('pic')
+            const repo = document.getElementById('repositorio')
+            const seguidores = document.getElementById('seguidores')
+            const seguindo = document.getElementById('seguindo')
+            const link = document.getElementById('link')
+            endpoint = 'https://api.github.com/users/JayfckZ'
+
+            fetch(endpoint).then(function(res){
+                return res.json()
+            })
+            .then(function(json){
+                console.log(json)
+                nome.innerHTML = json.name
+                user.innerHTML = `@${json.login}`
+                avatar.src = json.avatar_url
+                repo.innerHTML = json.public_repos
+                seguidores.innerHTML = json.followers
+                seguindo.innerHTML = json.following
+                link.href = json.html_url
+            })
+        })
+    </script>
+</body>
+</html>
