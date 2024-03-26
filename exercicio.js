@@ -12,14 +12,10 @@ console.log('\ALUNOS\n')
 console.log(alunos)
 
 encontraAluno = () => {
-    let alunosNotaAlta = []
-
-    alunos.forEach((itemAtual) => {       
-    if (itemAtual.nota >= 6){
-            alunosNotaAlta.push(itemAtual)
-        }
+    const alunosNotaAlta = alunos.filter((itemAtual) => {
+        return itemAtual.nota >= 6
     })
-    
+
     console.log('\nALUNOS COM NOTA ALTA\n')
     if(alunosNotaAlta.length == 0){
         console.log('Não houve alunos com nota maior ou igual a 6.\n')
